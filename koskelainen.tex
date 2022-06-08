@@ -1,0 +1,204 @@
+%-------------------------
+% Resume in Latex
+% Author : Evgenii Koskelainen
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[8]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textbf{#3} & #4 \\
+      \textbf{#5} & #6 \\
+      \textit{\small#7} & \textit{\small #8} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[3]{\resumeItem{#1}{#2}{#3}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Evgenii Koskelainen} & {Telegram}: \href{https://t.me/evgenii_kos/}{@evgenii\_kos}\\
+  \textbf {Python developer, ML Engineer} & Linkedin: \href{https://www.linkedin.com/in/koskelainen/}{linkedin.com/in/koskelainen} \\
+  \textbf & Email: \href{mailto:koskelainen8@gmail.com}{koskelainen8@gmail.com} \\
+\end{tabular*}
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, SQL, HTML, Shell}
+      \hfill
+      \textbf{Technologies}{: Hadoop, Spark, gRPC, Kafka, Docker, OpenShift}
+
+      \textbf{Python libs}{: PySpark, Pandas, NumPy, Scikit-learn, SciPy, XGboost, Shap}
+
+      \textbf{DataBase}{: Oracle, PostgreSQL, ClickHouse, Redis}
+
+    }
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Sberbank}{Moscow, Russia}
+      {Senior ML Engineer, Team Lead}{Sep. 2019 - Apr. 2022}
+      \resumeItemListStart
+        \resumeItem{EWS Model}
+          {
+Designed production model from MVP and data marts(Spark).
+EWS(Early Warning System) model allows to capture risk indicators such as the probability of default and
+financial, macroeconomic factors, and obtain a general assessment of credit deterioration.
+Basically it is multi models system that trains on big data with valuable insight.
+}
+        \resumeItem{Workflows}
+          {
+Designed the workflow framework MFW(Model’s FrameWork) to create and
+manage model pipelines leveraging reusable patterns to expedite developer productivity.
+The framework reduces the Time to Market each model by 15--25\%.
+}
+        \resumeItem{Management}
+          {
+Led the development of models, frameworks, DevOps, and integrations with other services.
+}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+     {Middle ML Engineer}{Dec. 2018 - Sep. 2019}
+     \resumeItemListStart
+        \resumeItem{NPL model and etc}
+          {
+Designed production models from MVP and data marts(Spark).
+Models detect potentially Non-Performing Loans
+where the likelihood of them being repaid in full is considered to be significantly lower.
+}
+        \resumeItem{Refactoring legacy}
+          {
+Refactored legacy models and redesigned with release to production.
+}
+     \resumeItemListEnd
+
+    \resumeSubheading
+      {OpenTechnologies}{Moscow, Russia}
+      {Data Engineer}{Dec. 2017 - Dec. 2018}
+      \resumeItemListStart
+        \resumeItem{Geolocation Application}
+          {
+Refactored legacy backend module and developed ETL tools for a project.
+Implemented module with process big data and integration with Splunk.
+}
+        \resumeItem{APM}
+          {
+Developed module to aggregate data from agent APM(Application Performance Management)
+and a make general report about the system status.
+}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Huawei Technologies}{St. Petersburg, Russia}
+      {Python Developer}{May 2016 - Sep. 2017}
+      \resumeItemListStart
+        \resumeItem{Reporting}
+          {
+Developed an application for automatic report generation for KPIs achievement by region.
+}
+        \resumeItem{Monitoring system}
+          {
+Developed backed module to install and manage monitoring system icinga(nagios).
+}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Bonch-Bruevich Saint Petersburg State University of Telecommunications}\par
+      \textbf{St. Petersburg, Russia}\par
+      {Master of Protected Communication Systems}\hfill{Sep. 2003 -- June 2008}
+    \resumeSubheading
+      {The Bonch-Bruevich Saint Petersburg State University of Telecommunications}\par
+      \textbf{St. Petersburg, Russia}\par
+      {Master of Economics and Managements to Communication}\hfill{Sep. 2006 -- June 2009}
+  \resumeSubHeadingListEnd
+
+\end{document}
