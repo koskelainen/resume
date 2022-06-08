@@ -45,7 +45,6 @@ edit ./latexdockercmd.sh
 
 ### Daemon setup
 
-
 If you're working on source in latex, you might want to compile it multiple times and don't want to start a container each time.
 
 ```bash
@@ -61,10 +60,10 @@ docker stop latex_daemon
 
 ### Clean
 
-```bash
-rm -rf *.aux *.log *.out *.fdb_latexmk *.fls
-find . -maxdepth 1 -regextype posix-extended -regex '.*/file[1-9]{2,3}.txt' -delete
+If you need clean to the project directory.
 
+```bash
+find -E . -regex '.*\.(aux|log|out|fdb_latexmk|fls)' -delete
 ```
 
 ### Source
